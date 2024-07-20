@@ -1,19 +1,38 @@
-function Value({ title, description, action }) {
+import { Button, Card, Container, Row, Col } from "react-bootstrap";
+
+function Value({ title, description, action, icon }) {
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{action}</p>
-    </div>
+    <Card style={{ width: "18rem" }}>
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>
+          {description}
+          <br />
+          {icon}
+        </Card.Text>
+        <Button className="pe-2" variant="primary">
+          {action}
+        </Button>
+      </Card.Body>
+    </Card>
   );
 }
 
 export default function Values({ values }) {
   return (
-    <section>
-      {values.map(({ title, description, action }, index) => (
-        <Value key={index} title={title} description={description} action={action} />
-      ))}
-    </section>
+    <Container>
+      <Row key="values">
+        {values.map(({ title, description, action, icon }, index) => (
+          <Col key={index}>
+            <Value
+              title={title}
+              description={description}
+              action={action}
+              icon={icon}
+            />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 }

@@ -1,6 +1,7 @@
-import Hero from './components/Hero.jsx';
-import MainNav from './components/MainNav.jsx';
-import Values from './components/Values.jsx';
+import Hero from "./components/Hero.jsx";
+import MainNav from "./components/MainNav.jsx";
+import Values from "./components/Values.jsx";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function App() {
   return (
@@ -8,15 +9,15 @@ export default function App() {
       <MainNav
         brand="Jumble Juice"
         leftLinks={[
-          { url: '#', text: 'About' },
-          { url: '#', text: 'Contact' },
-          { url: '#', text: 'Shop' },
+          { url: "#", text: "About" },
+          { url: "#", text: "Contact" },
+          { url: "#", text: "Shop" },
         ]}
         rightLinks={[
-          { url: '#', text: 'Login' },
-          { url: '#', text: 'Favorites' },
-          { url: '#', text: 'Settings' },
-          { url: '#', text: 'Profile' },
+          { url: "#", text: "Login" },
+          { url: "#", text: "Favorites" },
+          { url: "#", text: "Settings" },
+          { url: "#", text: "Profile" },
         ]}
       />
       <Hero
@@ -26,22 +27,25 @@ export default function App() {
       <Values
         values={[
           {
-            title: 'Freshness Unleashed',
+            title: "Freshness Unleashed",
             description:
-              'Embrace the goodness of nature with every sip of our smoothies, crafted from the freshest, locally-sourced ingredients.',
-            action: 'Try Now',
+              "Embrace the goodness of nature with every sip of our smoothies, crafted from the freshest, locally-sourced ingredients.",
+            action: "Try Now",
+            icon: <i className="bi bi-cup-straw"></i>,
           },
           {
-            title: 'Health with a Twist',
+            title: "Health with a Twist",
             description:
-              'Treat yourself without compromise, as we blend flavors creatively to deliver wholesome goodness without added sugars or artificial additives.',
-            action: 'Learn More',
+              "Treat yourself without compromise, as we blend flavors creatively to deliver wholesome goodness without added sugars or artificial additives.",
+            action: "Learn More",
+            icon: <i className="bi bi-suit-heart"></i>,
           },
           {
-            title: 'Community Wellbeing',
+            title: "Community Wellbeing",
             description:
-              'Join the Jumble Tribe and be a part of our health-conscious community, inspiring each other to lead active and joyful lives.',
-            action: 'Join Us',
+              "Join the Jumble Tribe and be a part of our health-conscious community, inspiring each other to lead active and joyful lives.",
+            action: "Join Us",
+            icon: <i className="bi bi-globe-americas"></i>,
           },
         ]}
       />
